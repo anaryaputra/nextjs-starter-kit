@@ -22,7 +22,7 @@ By [@anaryaputra](https://www.anaryaindika.com/)
 - Lint your codes before making commit.
 - Lint your commit message to follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) guideline.
 - Provide assistance to make commit message.
-- Automate release workflow on push to main branch or by dispatching the workflow, including determine the next version number strictly following the [Semantic Versioning](https://semver.org/), generate release notes and and changelog.
+- Automate release workflow on push to main branch or by dispatching the workflow, including determine the next version number strictly following the [Semantic Versioning](https://semver.org/) and generate changelog.
 
 ## Dependecies In Summary
 
@@ -38,7 +38,6 @@ This starter kit is equipped with:
 - Commitizen.
 - Commitlint.
 - Lint-staged.
-- Semantic Release.
 
 ## Use This Starter Kit
 

@@ -1,0 +1,75 @@
+#!/usr/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# echo '🏗️👷 Styling, testing and building your project before committing'
+
+echo '🕵 Checking your codes before committing 🕵'
+
+# Check Prettier standards
+pnpm run check-format ||
+(
+    echo '❌ Prettier Check Failed ❌';
+    echo 'Run "pnpm run format", add changes and try commit again.';
+    false;
+)
+
+echo '✅ Prettier check passed ✅'
+
+# End of prettier standards check
+
+# Check ESLint standards
+
+pnpm run check-lint ||
+(
+    echo '❌ ESLint Check Failed ❌';
+    echo 'Make the required changes listed ⬆ above ⬆, add changes and try commit again.';
+    false;
+)
+
+echo '✅ ESLint check passed ✅'
+
+# End of ESLint standards check
+
+# Check TSConfig standards
+
+pnpm run check-types ||
+(
+    echo '❌ Type Check Failed ❌';
+    echo 'Make the required changes listed ⬆ above ⬆, add changes and try to commit again.';
+    false;
+)
+
+echo '✅ Type check passed ✅'
+
+# End of TSConfig standards check
+
+echo '✅ All checks passed ✅'
+
+# Build
+echo '👷🏗️ Building your project 🏗️👷'
+
+pnpm run build || (
+    echo '❌ Build failed ❌';
+    echo 'Next build failed: View the errors ⬆ above ⬆ to see why.';
+    false;
+)
+
+echo '✅ Build success ✅'
+
+# End of build
+
+# Styling staged files
+
+echo '👨‍🎨 Styling your codes 👨‍🎨'
+
+pnpm run format
+
+echo '✅ Styling success ✅\n'
+
+# End of styling staged files
+
+# Commit
+
+echo '🚀 Committing your codes. 🚀'
+
+# End of commit

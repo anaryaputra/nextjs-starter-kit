@@ -5,7 +5,6 @@
 [![My Skills](https://skillicons.dev/icons?i=nextjs,ts,tailwind)](https://skillicons.dev)
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![semantic-release: conventional_commits](https://img.shields.io/badge/semantic--release-conventional_commits-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 A lightweight and simple Next.js starter kit. Made to simplify and accelerate your Next.js project set up. This Next.js starter kit is configured to use Typescript and Tailwind CSS.
 
